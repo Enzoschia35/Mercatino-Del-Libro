@@ -1,0 +1,30 @@
+<?php
+    $page = isset($_GET["page"]) ? $_GET["page"] : 'homepage';
+    
+    $_GET["page"] = 'homepage';
+    //reindirizzo le pagine dinamicamente tramite la query string
+    //isset è un metodo php che restituisce un valore booleano controllando se page è settato quindi se è stato ricevuto un valore da query string
+    // ? è un operatore ternario che nel caso il metodo isset restituisca true restituisce il risultato della query string altrimenti restituisce la pagina principale
+
+ ?>
+
+<?php include '../inizializzazione/init.php' ?> <!-- includo le costanti-->
+<?php include ROOT_PATH . 'public/parti-template/header.php'?>
+
+
+<?php include ROOT_PATH . 'public/parti-template/banner.php'?> <!-- Riduco il codice duplicato includendo il codice scritto nei file della cartella template parts -->
+<div id="main"class="container" style="margin-top: 50px;">
+    <div class="row">
+        
+
+        <div class="col-12">
+            <?php include  ROOT_PATH . 'public/pagine/' . $page . '.php'?> <!-- Riduco il codice utilizzando il risultato della query string-->
+        </div>
+
+        <?php include  ROOT_PATH . 'public/parti-template/sidebar.php'?> <!-- Riduco il codice duplicato includendo il codice scritto nei file della cartella template parts -->
+        <?php include ROOT_PATH . 'public/parti-template/chat.php'?>
+    </div>
+
+</div>
+
+<?php include  ROOT_PATH . 'public/parti-template/footer.php'?> <!-- Riduco il codice duplicato includendo il codice scritto nei file della cartella template parts -->

@@ -1,0 +1,173 @@
+.sidebar {
+    width: 100%;
+    border: 1px solid #eee;
+    border-radius: 0px;
+    padding: 15px;
+    box-shadow: 0px 0px 3px gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.catalogo {
+    
+    width: 100%;
+    border: 1px solid whitesmoke;
+    border-radius: 0px;
+    padding: 15px;
+    height: 100%; /* Altezza massima meno l'altezza della navbar */
+    box-shadow: 0px 0px 3px gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+
+.button-icon {
+    border: none;
+    background: none;
+    padding: 0;
+  }
+
+
+
+
+.sidebody {
+    flex: 1; /* Per far espandere il corpo della sidebar */
+}
+
+.sidefoot {
+    margin-top: 15px; /* Aggiungi spazio tra il corpo e il piè di pagina */
+}
+
+.searchBar {
+    margin-bottom: 15px; /* Aggiungi spazio tra la barra di ricerca e il contenuto successivo */
+}
+
+.suggerimenti {
+    position: absolute;
+    top: 100%; /* Posiziona il div sotto la barra di ricerca */
+    left: 0;
+    z-index: 1000; /* Assicura che i suggerimenti siano sopra gli altri elementi */
+    width: 100%; /* Assicura che il div dei suggerimenti abbia la stessa larghezza della barra di ricerca */
+    background-color: white;
+   
+    border-top: none; /* Rimuove la parte superiore del bordo per un aspetto pulito */
+    max-height: 200px; /* Imposta un'altezza massima per i suggerimenti con overflow */
+    overflow-y: auto; /* Abilita lo scorrimento verticale se ci sono troppi suggerimenti */
+}
+
+
+
+
+
+
+body{
+    background-color: whitesmoke;
+    
+}
+#suggerimenti_funzione {
+    position: absolute;
+    top: calc(100% + 10px); /* Spazio di 10px dalla parte inferiore del campo di input */
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.9); /* Bianco con trasparenza al 10% */
+    border: 1px solid #ccc;
+    width: 100%; /* Larghezza uguale al campo di input */
+    max-height: 300px; /* Altezza massima dei suggerimenti */
+    overflow-y: auto; /* Abilita lo scorrimento verticale se necessario */
+    z-index: 1000; /* Assicura che sia sopra gli altri elementi */
+}
+
+.suggerimento {
+    display: block;
+    padding: 5px;
+    border-bottom: 1px solid #eee; /* Bordo inferiore per separare i suggerimenti */
+    text-decoration: none; /* Rimuove il sottolineato predefinito */
+    color: #333; /* Colore del testo */
+}
+
+.suggerimento:hover {
+    background-color: #f5f5f5; /* Colore di sfondo al passaggio del mouse */
+}
+
+.button-icon {
+    border: none;
+    background: none;
+    padding: 0;
+}
+.no-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+.card {
+    transition: transform 0.2s, box-shadow 0.2s; /* Aggiunta transizione per l'ombra */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Aggiunta ombra */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Ombra più intensa quando si passa sopra */
+}
+
+.card-img-top {
+    height: 225px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-group .btn,
+.btn-group form {
+    flex: 1;
+}
+
+.mt-auto {
+    margin-top: auto;
+}
+
+.card-body small.text-muted {
+    display: block;
+    margin-top: 10px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    color: white;
+}
+
+.btn-group.d-flex .btn,
+.btn-group.d-flex form .btn {
+    width: 100%;
+    text-align: center;
+    padding: 10px; /* Aggiunto padding per aumentare la dimensione dei pulsanti */
+}
+
+.btn-group.d-flex .btn + form {
+    margin-left: 10px; /* Aumentato il margine sinistro per separare i pulsanti */
+}
